@@ -1211,12 +1211,15 @@ footer { visibility: hidden; }
 # 2. LOAD EXISTING TRAINED MODEL
 # --------------------------------------------------
 
+# MODEL_PATH = (
+#     Path(__file__).resolve().parent
+#     / "mindsync_models"
+#     / "mindsync_model_bundle.joblib"
+# )
 MODEL_PATH = (
     Path(__file__).resolve().parent
-    / "mindsync_models"
     / "mindsync_model_bundle.joblib"
 )
-
 
 @st.cache_resource
 def load_model_bundle():
